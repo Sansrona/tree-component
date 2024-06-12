@@ -1,6 +1,6 @@
 import type { AxiosInstance } from 'axios'
 import { BasicRest } from './core'
-import type { TreeNodeType } from '../types/views/tree-node.types'
+import type { ViewTreeNodeType } from '../types/views/tree-node.types'
 
 export class TreeNodeApi extends BasicRest {
   url = 'items'
@@ -10,6 +10,6 @@ export class TreeNodeApi extends BasicRest {
   }
 
   async getTasks() {
-    return await this.getRequest<TreeNodeType[]>(`${this.url}`)
+    return await this.getRequest<ViewTreeNodeType[]>(`${this.url}`)
   }
 }
